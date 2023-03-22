@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>  
+    <script src="https://kit.fontawesome.com/b795e2adc4.js" crossorigin="anonymous"></script>  
+</head>
+<body>
+    <header class="flex flex-row flex-wrap mx-auto bg-lime-600">
+        <h1 class="p-4 my-4 mx-auto"><span class="text-5xl font-mono">RETR</span><i class="fa-solid fa-spin fa-compact-disc text-5xl"></i><span class="text-4xl font-mono italic font-bold text-red-300">great</span></h1>
+    </header> 
+
+    <main class="grid grid-cols-10">  
+        <aside class="col-span-3 bg-orange-200 flex flex-col flex-wrap items-center min-w-fit">          
+            <div class="pt-6 items-center w-11/12 font-mono md:w-3/4">
+                <button class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 w-full min-w-fit" type="submit">My Profile</button>
+            </div>
+            <div class="pt-6 items-center w-11/12 font-mono md:w-3/4">
+                <button class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 w-full  min-w-fit" type="submit">Recipes</button>
+            </div>       
+            <div class="pt-6 items-center w-11/12 font-mono md:w-3/4">
+                <button class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 w-full min-w-fit" type="submit">Home Improvements</button>
+            </div>       
+            <div class="pt-6 items-center w-11/12 font-mono md:w-3/4">
+                <button class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 w-full  min-w-fit" type="submit">Friends</button>
+            </div>       
+            <div class=" pt-6 items-center w-11/12 font-mono md:w-3/4">
+                <button class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 w-full  min-w-fit" type="submit">Logout</button>
+            </div>         
+        </aside>  
+
+        <div class="col-span-7 flex flex-col flex-wrap mx-auto sm:max-w-sm md:max-w-md">          
+            <ul id="pics" class="px-4 mx-auto sm:max-w-sm md:max-w-md">                
+            </ul>            
+
+            <div class="p-4 my-4 mx-auto sm:max-w-sm md:max-w-md">     
+      
+                <button id="upload_widget" class="cloudinary-button">Upload files</button>    
+            </div>
+         
+        </div>    
+               
+   </main>
+  
+</body>
+<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript">
+</script>
+<script src="/js/test.js"></script>
+</html>
+
