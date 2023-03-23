@@ -12,9 +12,11 @@ Post.init({
     },
     post_text: {
         type: DataTypes.STRING,
-        allowNull: false,
     },
     img: {
+        type: DataTypes.STRING,
+    },
+    profile_img: {
         type: DataTypes.STRING,
     },
     created_at: {
