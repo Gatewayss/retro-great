@@ -1,16 +1,21 @@
 [
     {
-       "post_text": "Happy moment",
-       "user_id": 1 
+       "post_text": "Happy moment"
+    
     },
     {
-        "post_text": "Cool Dogs", 
-        "img": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Dog_coat_variation.png",
-        "user_id": 2 
+      
+        "img": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Dog_coat_variation.png"
+       
      },
      {
-        "post_text": "Sky stuff is nice", 
-        "img": "https://upload.wikimedia.org/wikipedia/commons/8/85/Sky-3.jpg",
-        "user_id": 2
+     
+      "post_text": "This weather is terrible."
+       
+     },
+     {
+       
+        "img": "https://upload.wikimedia.org/wikipedia/commons/8/85/Sky-3.jpg"
+      
      }
 ]
