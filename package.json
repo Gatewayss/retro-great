@@ -12,12 +12,13 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Gatewayss/retro-great/issues"
   },
   "homepage": "https://github.com/Gatewayss/retro-great#readme",
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "connect-session-sequelize": "^7.0.4",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
