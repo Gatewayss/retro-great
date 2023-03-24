@@ -10,44 +10,246 @@
 </head>
 <body>
     <header class="flex flex-row flex-wrap mx-auto bg-lime-600">
-        <h1 class="p-4 my-4 mx-auto"><span class="text-5xl font-mono">RETR</span><i class="fa-solid fa-spin fa-compact-disc text-5xl"></i><span class="text-4xl font-mono italic font-bold text-red-300">great</span></h1>
+        <h1 class="p-4 my-4 mx-auto"><a href="/" class="text-5xl font-mono">RETR</a><i class="fa-solid fa-spin fa-compact-disc text-5xl"></i><a href="/" class="text-4xl font-mono italic font-bold text-red-300">great</a>
+        </h1>
     </header> 
 
-    <main class="grid grid-cols-10">  
-        <aside class="col-span-3 bg-orange-200 flex flex-col flex-wrap items-center min-w-fit">          
-            <div class="pt-6 items-center w-11/12 font-mono md:w-3/4">
-                <button class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 w-full min-w-fit" type="submit">My Profile</button>
-            </div>
-            <div class="pt-6 items-center w-11/12 font-mono md:w-3/4">
-                <button class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 w-full  min-w-fit" type="submit">Recipes</button>
-            </div>       
-            <div class="pt-6 items-center w-11/12 font-mono md:w-3/4">
-                <button class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 w-full min-w-fit" type="submit">Home Improvements</button>
-            </div>       
-            <div class="pt-6 items-center w-11/12 font-mono md:w-3/4">
-                <button class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 w-full  min-w-fit" type="submit">Friends</button>
-            </div>       
-            <div class=" pt-6 items-center w-11/12 font-mono md:w-3/4">
-                <button class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 w-full  min-w-fit" type="submit">Logout</button>
-            </div>         
+    <main class="grid ">  
+        <aside class="flex flex-wrap bg-orange-200 p-2">     
+            <div class="flex flex-wrap mx-auto"> 
+                <div class="p-2 font-mono flex flex-wrap ">
+                    <button class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 " type="submit">Friends</button>
+                </div>
+                <div class="p-2 items-center font-mono flex flex-wrap">
+                    <button class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 " type="submit">Recipes</button>
+                </div>       
+                <div class="p-2 items-center font-mono flex flex-wrap">
+                    <button class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 " type="submit">Home Improvements</button>
+                </div>    
+               <!-- {{#if logged_in}}   -->
+                <div class="p-2 items-center font-mono flex flex-wrap">
+                    <a href="/profile" class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 " >My Profile</a>
+                </div>    
+                <div class="p-2 items-center font-mono flex flex-wrap">
+                    <button class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 " type="submit">Chat</button>                    
+                </div>    
+                <div class="p-2 items-center font-mono flex flex-wrap">
+                    <button class="no-button text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2" id="logout">Logout</button>                    
+                </div> 
+               <!-- {{else}} -->
+                <div class="p-2 items-center font-mono flex flex-wrap">
+                    <a href="/login" class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 ">Login</a>                    
+                </div> 
+              <!--   {{/if}} -->
+            </div>            
         </aside>  
 
-        <div class="col-span-7 flex flex-col flex-wrap mx-auto sm:max-w-sm md:max-w-md">          
-            <ul id="pics" class="px-4 mx-auto sm:max-w-sm md:max-w-md">                
-            </ul>            
+        
 
-            <div class="p-4 my-4 mx-auto sm:max-w-sm md:max-w-md">      
+       <!-- {{{body}}} -->
+       <!--HomePage--------------------------------------------------->
+
+
+<div class="flex flex-col flex-wrap p-2 mx-auto">    
+
+   <!-- {{#each posts as |post| }} -->
+  
+    <div class="p-4 mb-2 flex flex-wrap flex-col border-2 border-gray-100 rounded shadow-xl shadow-current max-w-2xl">
+  
+      <div>    
+  
+        <h2 class="py-5 flex flex-wrap flex-col ">             
+          <a class="text-2xl font-mono" href="/post/{{post.id}}"><!--{{post.post_text}}--></a>
+        </h2>
+      
+        <p class="py-2 flex flex-wrap flex-col text-gray-500 italic font-mono">Posted by <!--{{post.user.name}}--> on <!--{{post.created_at}} --></p>
+        
+        <div class="mx-auto">
+          <p>
+              <a href="/post/{{post.id}}"><img class="image mx-auto" src="{{post.img}}"></img></a>  
+          </p>  
+        </div>
+  
+        <div class="mx-auto">
+          <p>
+              <a href="/post/{{post.id}}"><img class="image mx-auto" src="{{post.profile_img}}"></img></a>  
+          </p>  
+        </div>
+  
+      </div>
+  
+    </div>
+  
+   <!-- {{/each}} -->
+  
+  </div>
+<!---------Login Page---------------->  
+
+<div id="login-card" class="py-2 mx-auto md:mx-40 md:px-10">
+    <div class="flex flex-wrap flex-col m-5 border-2 border-gray-500 shadow-lg shadow-current rounded">
+      <div class="flex flex-wrap flex-col bg-gray-500">
+        <div class="px-4 py-2 mx-auto">
+          <h2 class="text-xl text-orange-200 font-bold font-mono">Login</h2>
+        </div>
+      </div>  
+
+    <form class="form login-form p-4 bg-red-200">
+      <div class="form-group p-2">
+        <label for="email-login" class="font-mono">email:</label>
+        <input class="form-input p-3 border-2 border-black w-full" type="text" id="email-login" />
+      </div>
+      <div class="form-group p-2">
+        <label for="password-login" class="font-mono">password:</label>
+        <input class="form-input p-3 border-2 border-black w-full" type="password" id="password-login" />
+      </div>
+      <div class="form-group p-2 flex flex-wrap">
+        <button class="btn btn-primary font-mono text-white rounded-lg bg-gray-500 hover:bg-gray-700 mx-auto mt-4 p-4" type="submit">login</button>
+      </div>
+    </form>
+  </div>
+</div>  
+
+<div id="signup-card" class="py-2 mx-auto md:mx-40 md:px-10">
+    <div class="flex flex-wrap flex-col m-5 border-2 border-gray-500 shadow-lg shadow-current rounded">
+      <div class="flex flex-wrap flex-col bg-gray-500">
+        <div class="px-4 py-2 mx-auto">
+          <h2 class="text-xl text-orange-200 font-bold font-mono">Signup</h2>        
+        </div>
+        <div class="px-4 py-2 mx-auto"> 
+          <p class="font-mono">(must be 45 or older)</p>
+        </div>
+      </div>  
+
+    <form class="form signup-form p-4 bg-red-200">
+      <div class="form-group">
+        <label for="name-signup" class="font-mono">name:</label>
+        <input  class="form-input p-3 border-2 border-black w-full"  type="text" id="name-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup" class="font-mono">email:</label>
+        <input  class="form-input p-3 border-2 border-black w-full"  type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup" class="font-mono">password:</label>
+        <input  class="form-input p-3 border-2 border-black w-full"  type="password" id="password-signup" />
+      </div>
+      <div class="form-group p-2 flex flex-wrap">
+         <button class="btn btn-primary font-mono text-white rounded-lg bg-gray-500 hover:bg-gray-700 mx-auto mt-4 p-4" type="submit">signup</button>
+      </div>
+    </form>
+  </div>
+  </div>
+</div>
+
+
+<script src="./js/login.js"></script>
+
+<!----------------------Profile Page------------------------->
+
+ 
+<div class="flex flex-wrap flex-col pt-4 mx-auto"> 
+
+   <!-- {{#if posts.length}} 
+  
+    {{#each posts as |post|}}
+  
+        {{#if post.profile_img}} -->
+    
+        <p class="w-2/4  sm:w-2/5 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/5  border-8 border-double border-red-300 mx-auto rounded-lg">
+          <a href="/post/{{post.id}}"><img class="image mx-auto " src="{{post.profile_img}}"></img></a>
+        </p>   
+  
+     <!--   {{/if}}
+      
+      {{/each}}  
+        
+      {{/if}} -->
+      
+  <div id="profile-btn" class="form-group flex flex-wrap mt-2">      
+      <button id="profile_widget" class="btn btn-primary text-white rounded-lg bg-gray-200 hover:bg-gray-300 mx-auto py-2 px-4">Add Prolie Photo</button>  
+  </div>
+    
+  </div>
+  
+  <div id="new-post" class="py-2 mt-4 md:px-36 border-2 border-gray-700 shadow-lg shadow-current rounded mx-auto">
+    <div class="flex flex-wrap flex-col m-5 ">
+        <div class="flex flex-wrap flex-col ">               
+            <div class="px-4 py-2 mx-auto">
+                <h2 class="text-xl text-gray-500 font-bold font-mono mx-auto">What's on your mind, <!--{{name}}-->?</h2>
+            </div>                   
+        </div>          
+  
+        <form class="form new-post-form">
+  
+          <div class="form-group flex flex-wrap flex-col px-4 py-2">
+            <label for="post-text"></label>
+            <input class="form-input p-3 border-2 border-black" type="text" id="post-text" name="post-text" />
+          </div>
+      
           
-                <button id="upload_widget" class="cloudinary-button">Upload files</button>    
-            </div>
-         
-        </div>    
+          <div class="form-group flex flex-wrap">
+            <button type="submit" class="btn btn-primary text-white rounded-lg bg-gray-500 hover:bg-gray-700 mx-auto mt-2 py-4 px-14">Post</button>  
+          </div>
+  
+        </form>
+  
+        <div class="form-group flex flex-wrap mt-2">      
+          <button id="upload_widget" class="btn btn-primary text-white rounded-lg bg-gray-500 hover:bg-gray-700 mx-auto py-4 px-8">Add Photo</button>  
+        </div>      
+              
+    </div>
+  </div>
+  
+      
+  <!--{{#if posts.length}}-->
+  <div id="profile" class="post-list flex flex-wrap flex-col mx-auto py-4">
+  
+   <!-- {{#each posts as |post|}} -->
+  
+    <div class="p-4 mb-2 flex flex-wrap flex-col border-2 border-gray-100 rounded shadow-xl shadow-current max-w-2xl">    
+  
+      <div id="posts">
+        <h2 class="py-5 flex flex-wrap flex-col">
+          <a class="text-2xl font-mono" href="/post/{{post.id}}"><!--{{post.post_text}}--></a>
+        </h2>
+  
+        <p class="py-2 flex flex-wrap flex-col text-gray-500 italic font-mono">Posted on <!--{{post.created_at}}--></p>
+  
+        <div class="mx-auto">
+          <p>
+            <a href="/post/{{post.id}}"><img class="image mx-auto" src="{{post.img}}"></img></a>
+          </p> 
+        </div>
+  
+        <div class="mx-auto">
+          <p>
+            <a href="/post/{{post.id}}"><img class="image mx-auto" src="{{post.profile_img}}"></img></a>
+          </p> 
+        </div>
+  
+      </div>
+  
+      <div class="px-4 py-2">
+        <button class="btn text-white bg-gray-300 rounded font-mono p-2" data-id="{{post.id}}">DELETE</button>
+      </div>
+  
+    </div>
+   <!-- {{/each}} -->
+  </div>
+ <!-- {{/if}}-->
+  
+  
+  <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript">
+  </script>
+  <script src="/js/test.js"></script>
+<!------------------------------------------------------------------>
                
    </main>
+    <!-- {{#if logged_in}} -->
+  <script src="/js/logout.js"></script>
+  <!-- {{/if}} -->
   
 </body>
-<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript">
-</script>
-<script src="../js/test.js"></script>
+
 </html>
 
