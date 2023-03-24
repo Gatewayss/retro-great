@@ -2,19 +2,19 @@
     {
     "name":"Jane",
     "email": "jane@gmail.com",
-    "password": "password",
+    "password": "password12345",
     "birth_date": "1998-12-22"
     },
     {
     "name":"Gage",
     "email": "gage@gmail.com",
-    "password": "password1",
+    "password": "password12345",
     "birth_date": "1990-09-12"
     },
     {
     "name":"Sarah",
     "email": "sarah@gmail.com",
-    "password": "password2",
+    "password": "password12345",
     "birth_date": "1991-08-02"
     }
 ]
