@@ -1,0 +1,37 @@
+
+<div>    
+
+  <!--{{#each posts as |post| }} -->
+
+  <div>
+
+    <div>    
+
+      <h2>             
+        <a href="/post/{{post.id}}"><!--{{post.post_text}} --></a>
+      </h2>
+    
+      <p>Posted by <!--{{post.user.name}}--> on <!--{{post.created_at}} --></p>
+      
+      <div>
+        <p>
+            <a href="/post/{{post.id}}"><img class="image" src="{{post.img}}"></img></a>  
+        </p>  
+      </div>
+
+      <div>
+        <p>
+            <a href="/post/{{post.id}}"><img class="image" src="{{post.profile_img}}"></img></a>  
+        </p>  
+      </div>
+
+    </div>
+
+  </div>
+
+ <!-- {{/each}} -->
+
+</div>
+
+  
+  

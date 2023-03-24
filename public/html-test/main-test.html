@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+    <script src="https://kit.fontawesome.com/b795e2adc4.js" crossorigin="anonymous"></script>  
+</head>
+<body>
+    <header>
+        <h1><a href="/">RETR</a><i class="fa-solid fa-spin fa-compact-disc"></i><a href="/">great</a>
+        </h1>
+    </header> 
+
+    <main>  
+        <aside>     
+            <div> 
+                <div>
+                    <button type="submit">Friends</button>
+                </div>
+                <div>
+                    <button type="submit">Recipes</button>
+                </div>       
+                <div>
+                    <button type="submit">Home Improvements</button>
+                </div>    
+               <!-- {{#if logged_in}} -->   
+                <div>
+                    <a href="/profile">My Profile</a>
+                </div>    
+                <div>
+                    <button type="submit">Chat</button>                    
+                </div>    
+                <div>
+                    <button id="logout">Logout</button>                    
+                </div> 
+               <!-- {{else}} -->
+                <div>
+                    <a href="/login">Login</a>                    
+                </div> 
+                <!-- {{/if}} -->
+            </div>            
+        </aside>  
+
+        
+
+      <!--  {{{body}}} -->
+      
+               
+   </main>
+    <!-- {{#if logged_in}} -->
+  <script src="/js/logout.js"></script>
+ <!-- {{/if}} -->
+  
+</body>
+<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript">
+</script>
+<script src="/js/test.js"></script>
+</html>
+
