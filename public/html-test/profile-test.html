@@ -1,0 +1,89 @@
+ 
+<div> 
+
+  <!--{{#if posts.length}} 
+
+  {{#each posts as |post|}}
+
+      {{#if post.profile_img}} -->
+  
+      <p>
+        <a href="/post/{{post.id}}"><img class="image" src="{{post.profile_img}}"></img></a>
+      </p>   
+
+      <!--{{/if}}
+    
+    {{/each}}  
+      
+    {{/if}} -->
+    
+<div id="profile-btn" class="form-group">      
+    <button id="profile_widget" class="btn btn-primary">Add Prolie Photo</button>  
+</div>
+  
+</div>
+
+<div id="new-post">
+    <div>
+        <div>               
+            <div>
+                <h2>What's on your mind, <!--{{name}}-->?</h2>
+            </div>                   
+        </div>          
+  
+        <form class="form new-post-form">
+          <div class="form-group">
+            <label for="post-text"></label>
+            <input class="form-input" type="text" id="post-text" name="post-text" />
+          </div>      
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Post</button>  
+          </div>
+        </form>
+        <div class="form-group">      
+          <button id="upload_widget" class="btn btn-primary">Add Photo</button>  
+        </div>            
+    </div>
+  </div>  
+
+      
+   <!-- {{#if posts.length}} -->
+    <div id="profile" class="post-list">
+     
+  
+       <!-- {{#each posts as |post|}} -->
+
+        <div>           
+          <div id="posts">
+            <h2>
+              <a href="/post/{{post.id}}"><!--{{post.post_text}}--></a>
+            </h2>
+  
+            <p>Posted on <!--{{post.created_at}}--></p>
+  
+            <div>
+              <p>
+                <a href="/post/{{post.id}}"><img class="image" src="{{post.img}}"></img></a>
+              </p> 
+            </div>
+          </div>
+          <div>
+            <button data-id="{{post.id}}">DELETE</button>
+          </div>
+        </div>
+        <!--{{/each}}-->
+        </div>
+    </div>
+     <!-- {{/if}} -->
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript">
+  </script>
+  <script src="/js/test.js"></script>
