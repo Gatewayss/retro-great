@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="/css/styles.css"> 
 </head>
 <body>
+    <div class="background-image">
+
+    </div>
       <header>
             
 
@@ -17,30 +20,26 @@
     
             <nav>
 			<ul>
-				<li><a href="submit" style="background: #ffebed;"><i style="background: #ff4154;" class="fa-solid fa-camera"></i> Friends</a></li>
-				<li><a href="submit" style="background: #ffebed;"><i style="background: #ff4154;" class="fa-solid fa-camera"></i> Recipies</a></li>
-				<li> <a href="submit" style="background: #ffebed;"><i style="background: #ff4154;" class="fa-solid fa-camera"></i> Home improvements</a></li>
+				<li class="btn"><a href="submit">Friends</a></li>
+				<li class="btn"><a href="submit">Recipies</a></li>
+				<li class="btn"> <a href="submit"> Home improvements</a></li>
                 {{#if logged_in}}  
-				<li><a href="profile" style="background: #ffebed;"><i style="background: #ff4154;" class="fa-solid fa-camera"></i> My Profile</a></li>
-                <li><a href="submit" style="background: #ffebed;"><i style="background: #ff4154;" class="fa-solid fa-camera"></i> chat</a></li>
-                <li><a href="logout" style="background: #ffebed;"><i style="background: #ff4154;" class="fa-solid fa-camera"></i> Logout</a></li>
+				<li class="btn"><a href="profile">My Profile</a></li>
+                <li class="btn"><a href="submit">chat</a></li>
+                <li class="btn"><a href="logout">Logout</a></li>
                 {{else}}
-                <li> <a href="Login" style="background: #ffebed;"><i style="background: #ff4154;" class="fa-solid fa-camera"></i> Login</a></li>
+                <li  class="btn"> <a href="Login">Login</a></li>
                  {{/if}}
 			</ul>
 		</nav>
     </header> 
     <main>
-      
-
-    
-
-    
-      
-          
-            <div class="post__create">
+     
+            
             {{{body}}} 
-            </div>   
+            
+
+           
    </main>
      {{#if logged_in}}
   <script src="/js/logout.js"></script>
