@@ -20,7 +20,7 @@ Post.init({
         type: DataTypes.STRING,
     },
     created_at: {
-        type: DataTypes.DATEONLY,
+        type: DataTypes.DATE,
         defaultValue: DataTypes.NOW,
     },
     user_id: {
