@@ -1,29 +1,19 @@
 const router = require('express').Router();
-const { Post, User, Comment, ChatRoom, ChatMessage } = require('../models');
+const { Post, User, Comment, ChatMessage } = require('../models');
 const withAuth = require('../utils/auth');
-const { Op } = require("sequelize");
 
-router.get('/chat', async (req, res) => {
-  
+router.get('/chat', withAuth, async (req, res) => {
   try {
-    const chatRooms = await ChatRoom.findAll({
-      include: [
-        {
-          model: User,
-          through: { attributes: [] }, // exclude join table attributes
-        },
-        {
-          model: ChatMessage,
-          include: [ User ],
-        },
-      ],
+    const chatMessages = await ChatMessage.findAll({
+      include: {
+        model: User,
+        attributes: ['name'],
+      },
     });
 
-    // const user_id = req.session.user_id;
-    // const user = await User.findByPk(user_id); // find the user by their ID
-    // const username = user.name
-    
-    res.render('chat', { chatRooms });
+  const messages = chatMessages.map((chat) => chat.get({ plain: true }));
+
+  res.render('chat', { messages });
 
   } catch (error) {
     console.error(error);
@@ -44,7 +34,6 @@ router.get('/', async (req, res) => {
     });
 
     const posts = postData.map((post) => post.get({ plain: true }));
-
  
     res.render('homepage', { 
       posts, 
