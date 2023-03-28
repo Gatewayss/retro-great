@@ -8,7 +8,7 @@
 
       <p class="mx-auto"></div><img class="image mx-auto" src="{{profile_img}}"></img></p>    
 
-      <p class="py-2 flex flex-wrap flex-col text-gray-500 italic font-mono">Posted by {{user.name}} on {{created_at}}</p>   
+      <p class="py-2 flex flex-wrap flex-col text-gray-500 italic font-mono">Posted by {{user.name}} on {{format_date created_at}}</p>   
 
     </div>
       
@@ -19,7 +19,7 @@
 {{/if}}
 
     {{#each comments as |comment|}}
-      <p>{{created_at}}</p>
+      <p>{{format_date created_at}}</p>
       <p>{{user.name}}: {{comment_text}}</p>
       <hr />
     {{/each}}
