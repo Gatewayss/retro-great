@@ -1,20 +1,25 @@
 [
-    {
-    "name":"Jane",
-    "email": "jane@gmail.com",
+    {  
+    "name":"Sherri",
+    "email": "sherri@gmail.com",
     "password": "password12345",
-    "birth_date": "1998-12-22"
+    "birth_date": "1976-12-22",
+    "age": 46
     },
     {
-    "name":"Gage",
-    "email": "gage@gmail.com",
+   
+    "name":"Rachel",
+    "email": "rachel@gmail.com",
     "password": "password12345",
-    "birth_date": "1990-09-12"
+    "birth_date": "1966-03-12",
+    "age": 57
     },
     {
-    "name":"Sarah",
-    "email": "sarah@gmail.com",
+      
+    "name":"Karen",
+    "email": "karen@gmail.com",
     "password": "password12345",
-    "birth_date": "1991-08-02"
+    "birth_date": "1970-02-14",
+    "age": 53
     }
 ]
