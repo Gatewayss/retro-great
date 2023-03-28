@@ -18,7 +18,7 @@
     {{/if}}
     
 <div id="profile-btn" class="form-group flex flex-wrap mt-2">      
-    <button id="profile_widget" class="btn btn-primary text-white rounded-lg bg-gray-200 hover:bg-gray-300 mx-auto py-2 px-4">Add Prolie Photo</button>  
+    <button id="profile_widget" class="btn btn-primary text-white rounded-lg bg-gray-200 hover:bg-gray-300 mx-auto py-2 px-4">Add Profile Photo</button>  
 </div>
   
 </div>
@@ -65,7 +65,7 @@
         <a class="text-2xl font-mono" href="/post/{{post.id}}">{{post.post_text}}</a>
       </h2>
 
-      <p class="py-2 flex flex-wrap flex-col text-gray-500 italic font-mono">Posted on {{post.created_at}}</p>
+      <p class="py-2 flex flex-wrap flex-col text-gray-500 italic font-mono">Posted on {{format_date post.created_at}}</p>
 
       <div class="mx-auto">
         <p>
