@@ -1,18 +1,64 @@
 [
-    {
-       "post_text": "Happy moment",
-       "user_id": 1
+   {
+      "post_text": "Is it just me, or does Target not have any good coupons anymore??",
+      "user_id": 3
+   },
+   {
+     "post_text": "Still my favorite band!",
+     "img": "https://res.cloudinary.com/dkm1hkwdl/image/upload/v1679935007/l3raqgfh1xjkumiegvmq.jpg",
+     "user_id": 1
+  },
+  {
+     "post_text": "My older brother and his friends in 1988. I swear Gary's eyes were always closed in pictures!",
+     "profile_img": "https://res.cloudinary.com/dkm1hkwdl/image/upload/v1679933778/fqat2imgrv8flpdmz71l.jpg",
+     "user_id": 2
+  },
+  {
+     "post_text": "California! Why, yes - I AM day drinking - lol.",
+     "img": "https://res.cloudinary.com/dkm1hkwdl/image/upload/v1679932424/fmj4bxtstkkufbk3lscf.jpg",
+     "user_id": 1
+  },
+  {
+     "post_text": "My cute litte cousins in 1982 :)",
+     "img": "https://res.cloudinary.com/dkm1hkwdl/image/upload/v1679931924/iwizjx82g0mjelltwbm9.jpg",
+     "user_id": 1
+  },
+  {
+     "post_text": "Me rocking out in high school. Too funny.",
+     "img": "https://res.cloudinary.com/dkm1hkwdl/image/upload/v1679935409/ht5icqjibctsshbahsk9.jpg",
+     "user_id": 3
+  },
+  {
+     "post_text": "This weather is terrible.",
+     "user_id": 3
+  },
+  {
+     "post_text": "My mom and dad in the early 80's",
+     "img": "https://res.cloudinary.com/dkm1hkwdl/image/upload/v1679933741/wr85rapfpz0k4ev5lqox.jpg",
+     "user_id": 2
+  },
+  {
+     "post_text": "A modeling shot of me in the early 90's. Ugh - my hair was so shiny then.",
+     "profile_img": "https://res.cloudinary.com/dkm1hkwdl/image/upload/v1679932766/d4hi3ionl5vhxlwpudq2.jpg",
+     "user_id": 3
+  },
+  {
+     "post_text": "Worked out this morninng. Feeling good!",
+     "user_id": 1
+  },
+   {
+     "post_text": "Favorite dog breed? Tell me in the comments. Go!", 
+       "img": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Dog_coat_variation.png",
+       "user_id": 2
     },
     {
-        "img": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Dog_coat_variation.png",
-        "user_id": 2
-     },
-     {
-      "post_text": "This weather is terrible.",
-      "user_id": 3
-     },
-     {
-        "img": "https://upload.wikimedia.org/wikipedia/commons/8/85/Sky-3.jpg",
-        "user_id": 1
-     }
+     "post_text": "My daughter is the cutest :)",
+     "profile_img": "https://res.cloudinary.com/dkm1hkwdl/image/upload/v1679931830/cy6wa2o1a9gr7tfzgfjd.jpg",
+     "user_id": 1
+  },
+    {
+     "post_text": "On the way to Cali! My daughter took this pic from the plane. Add amateur photographer to her list of talents! lol", 
+     "img": "https://upload.wikimedia.org/wikipedia/commons/8/85/Sky-3.jpg",
+     "user_id": 1
+    }
 ]

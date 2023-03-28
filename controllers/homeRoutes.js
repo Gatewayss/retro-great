@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Post, User, Comment, ChatRoom, ChatMessage } = require('../models');
 const withAuth = require('../utils/auth');
+const { Op } = require("sequelize");
 
 router.get('/chat', async (req, res) => {
   
@@ -36,7 +37,7 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ['name'],          
+          attributes: ['name', 'birth_date', 'age'],          
         },
       ],
       order: [['created_at', 'DESC']],
@@ -107,6 +108,28 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
+router.get('/edit/:id', async (req, res) => {
+  try {
+    const editData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    const edit = editData.get({ plain: true });
+
+    res.render('edit', {
+      ...edit,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get('/login', (req, res) => {  
   if (req.session.logged_in) {
     res.redirect('/profile');
@@ -114,6 +137,212 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+router.get('/filter1', async (req, res) => {
+  try {  
+    const postData = await Post.findAll({ 
+     
+      include: [
+        {
+          model: User,
+          attributes: ['name', 'birth_date', 'age' ],    
+          where: {
+            age: {
+              [Op.between]: [45, 50]
+    
+            }
+          },      
+          
+        },
+      ],
+      order: [['created_at', 'DESC']],
+      
+    });
+  
+   
+    const posts = postData.map((post) => post.get({ plain: true }));     
+
+ 
+    res.render('homepage', { 
+      posts, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+router.get('/filter2', async (req, res) => {
+  try {  
+    const postData = await Post.findAll({ 
+     
+      include: [
+        {
+          model: User,
+          attributes: ['name', 'birth_date', 'age' ],    
+          where: {
+            age: {
+              [Op.between]: [45, 55]
+    
+            }
+          },      
+          
+        },
+      ],
+      order: [['created_at', 'DESC']],
+      
+    });
+  
+   
+    const posts = postData.map((post) => post.get({ plain: true }));     
+
+ 
+    res.render('homepage', { 
+      posts, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/filter3', async (req, res) => {
+  try {  
+    const postData = await Post.findAll({ 
+     
+      include: [
+        {
+          model: User,
+          attributes: ['name', 'birth_date', 'age' ],    
+          where: {
+            age: {
+              [Op.between]: [45, 60]
+    
+            }
+          },      
+          
+        },
+      ],
+      order: [['created_at', 'DESC']],
+      
+    });
+  
+   
+    const posts = postData.map((post) => post.get({ plain: true }));     
+
+ 
+    res.render('homepage', { 
+      posts, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
+router.get('/filter4', async (req, res) => {
+  try {  
+    const postData = await Post.findAll({ 
+     
+      include: [
+        {
+          model: User,
+          attributes: ['name', 'birth_date', 'age' ],    
+          where: {
+            age: {
+              [Op.between]: [50, 55]
+    
+            }
+          },      
+          
+        },
+      ],
+      order: [['created_at', 'DESC']],
+      
+    });
+  
+   
+    const posts = postData.map((post) => post.get({ plain: true }));     
+
+ 
+    res.render('homepage', { 
+      posts, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/filter5', async (req, res) => {
+  try {  
+    const postData = await Post.findAll({ 
+     
+      include: [
+        {
+          model: User,
+          attributes: ['name', 'birth_date', 'age' ],    
+          where: {
+            age: {
+              [Op.between]: [50, 60]
+    
+            }
+          },      
+          
+        },
+      ],
+      order: [['created_at', 'DESC']],
+      
+    });
+  
+   
+    const posts = postData.map((post) => post.get({ plain: true }));     
+
+ 
+    res.render('homepage', { 
+      posts, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/filter6', async (req, res) => {
+  try {  
+    const postData = await Post.findAll({ 
+     
+      include: [
+        {
+          model: User,
+          attributes: ['name', 'birth_date', 'age' ],    
+          where: {
+            age: {
+              [Op.between]: [55, 60]
+    
+            }
+          },      
+          
+        },
+      ],
+      order: [['created_at', 'DESC']],
+      
+    });
+  
+   
+    const posts = postData.map((post) => post.get({ plain: true }));     
+
+ 
+    res.render('homepage', { 
+      posts, 
+      logged_in: req.session.logged_in 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;

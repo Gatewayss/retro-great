@@ -37,6 +37,9 @@ User.init({
     birth_date: {
         type: DataTypes.DATEONLY,
     },
+    age: {
+        type: DataTypes.INTEGER,
+    },
 },
     {
     hooks: {

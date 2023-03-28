@@ -1,22 +1,22 @@
 [
     {
-        "comment_text": "Amazing!",
+        "comment_text": "I know, right?!",
         "user_id": 1,
         "post_id": 1
     },
     {
-        "comment_text": "Cool!",
+        "comment_text": "RIP Kurt",
         "user_id": 2,
         "post_id": 2
     },
     {
-        "comment_text": "Love it!",
-        "user_id": 2,
-        "post_id": 2
+        "comment_text": "Ha! So Gary.",
+        "user_id": 3,
+        "post_id": 3
     },
     {
-        "comment_text": "Amazing!",
+        "comment_text": "Jealous!!!!",
         "user_id": 1,
-        "post_id": 1
+        "post_id": 4
     }
 ]
