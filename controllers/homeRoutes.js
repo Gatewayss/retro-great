@@ -80,6 +80,28 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
+router.get('/edit/:id', async (req, res) => {
+  try {
+    const editData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
+    const edit = editData.get({ plain: true });
+
+    res.render('edit', {
+      ...edit,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get('/login', (req, res) => {  
   if (req.session.logged_in) {
     res.redirect('/profile');
