@@ -11,6 +11,7 @@ router.get('/', async (req, res) => {
           attributes: ['name'],
         },
       ],
+      order: [['created_at', 'DESC']],
     });
 
     const posts = postData.map((post) => post.get({ plain: true }));
@@ -64,6 +65,7 @@ router.get('/profile', withAuth, async (req, res) => {
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: Post }],
+      order: [[ Post, 'created_at', 'DESC']], 
     });
 
     const user = userData.get({ plain: true });
