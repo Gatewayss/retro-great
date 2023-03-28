@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Post, User, Comment, ChatRoom, ChatMessage } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/chat', withAuth, async (req, res) => {
+router.get('/chat', async (req, res) => {
   
   try {
     const chatRooms = await ChatRoom.findAll({
@@ -18,12 +18,11 @@ router.get('/chat', withAuth, async (req, res) => {
       ],
     });
 
-    const user_id = req.session.user_id;
-    const user = await User.findByPk(user_id); // find the user by their ID
-    const username = user.name
+    // const user_id = req.session.user_id;
+    // const user = await User.findByPk(user_id); // find the user by their ID
+    // const username = user.name
     
-    res.render('chat', { chatRooms, username
-    });
+    res.render('chat', { chatRooms });
 
   } catch (error) {
     console.error(error);
