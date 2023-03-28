@@ -1,5 +1,24 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, ChatMessage} = require('../../models');
+const withAuth = require('../../utils/auth');
+
+router.post('/chat', withAuth, async (req, res) => {
+  try {
+    const user_id = req.session.user_id;
+    const user = await User.findByPk(user_id); // find the user by their ID
+    const username = user.name
+
+    const { message } = req.body; 
+    const newChatMessage = { message, user_id: req.session.user_id, username: username };
+
+    const createdChatMessage = await ChatMessage.create(newChatMessage);
+    
+    console.log(createdChatMessage);
+    return res.status(201).json(createdChatMessage)
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+})
 
 router.post('/', async (req, res) => {
   try {

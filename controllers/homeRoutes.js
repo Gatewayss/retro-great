@@ -1,6 +1,35 @@
 const router = require('express').Router();
-const { Post, User, Comment } = require('../models');
+const { Post, User, Comment, ChatRoom, ChatMessage } = require('../models');
 const withAuth = require('../utils/auth');
+
+router.get('/chat', withAuth, async (req, res) => {
+  
+  try {
+    const chatRooms = await ChatRoom.findAll({
+      include: [
+        {
+          model: User,
+          through: { attributes: [] }, // exclude join table attributes
+        },
+        {
+          model: ChatMessage,
+          include: [ User ],
+        },
+      ],
+    });
+
+    const user_id = req.session.user_id;
+    const user = await User.findByPk(user_id); // find the user by their ID
+    const username = user.name
+    
+    res.render('chat', { chatRooms, username
+    });
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
 
 router.get('/', async (req, res) => {
   try {  
