@@ -1,0 +1,20 @@
+<h1>Chat room list</h1>
+<button id="exit-button">Exit</button>
+
+<div>
+  <ul id="room-list">
+    {{#each chatRooms as |room| }}
+      <button class="room" value="{{room.dataValues.name}}">{{room.dataValues.name}}</a></button>
+    {{/each}}
+  </ul>
+</div>
+
+<div id="messages-div">
+<ul id="messages">
+</ul>
+{{username}}
+    <form id="form">
+      <input id="input" autocomplete="off" />
+      <button>Send</button>
+    </form>
+</div>
