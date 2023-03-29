@@ -1,20 +1,14 @@
-<h1>Chat room list</h1>
-<button id="exit-button">Exit</button>
+<h1>Welcome to the retro great chat room!</h1>
 
-<div>
-  <ul id="room-list">
-    {{#each chatRooms as |room| }}
-      <button class="room" value="{{room.dataValues.name}}">{{room.dataValues.name}}</a></button>
-    {{/each}}
-  </ul>
-</div>
-
-<div id="messages-div">
 <ul id="messages">
+  {{#each messages as |message|}}
+  <li>{{format_date message.created_at}}  {{message.created_time}} <br> {{message.user.name}}: {{message.message}}</li>
+  {{/each}}
 </ul>
-{{username}}
-    <form id="form">
-      <input id="input" autocomplete="off" />
-      <button>Send</button>
-    </form>
-</div>
+
+<form id="form">
+  <input id="input" autocomplete="off" />
+  <button>Send</button>
+</form>
+
+<script src="/js/chat.js"></script> 

@@ -4,17 +4,12 @@ const withAuth = require('../../utils/auth');
 
 router.post('/chat', withAuth, async (req, res) => {
   try {
-    const user_id = req.session.user_id;
-    const user = await User.findByPk(user_id); // find the user by their ID
-    const username = user.name
-
-    const { message } = req.body; 
-    const newChatMessage = { message, user_id: req.session.user_id, username: username };
-
-    const createdChatMessage = await ChatMessage.create(newChatMessage);
+    const newMessage = await ChatMessage.create({
+      ...req.body,
+      user_id: req.session.user_id
+    });
     
-    console.log(createdChatMessage);
-    return res.status(201).json(createdChatMessage)
+    return res.status(201).json(newMessage)
   } catch (error) {
     return res.status(500).json({ error: error.message })
   }
