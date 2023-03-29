@@ -1,55 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>  
-    <script src="https://kit.fontawesome.com/b795e2adc4.js" crossorigin="anonymous"></script>  
-    <link rel="stylesheet" href="/css/styles.css">
-    {{!-- <script src="http://127.0.0.1:3000/socket.io/socket.io.js"></script> --}}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ 
+  <script src="https://kit.fontawesome.com/b795e2adc4.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body>
-    <header class="flex flex-row flex-wrap mx-auto bg-lime-600">
-        <h1 class="p-4 my-4 mx-auto"><a href="/" class="text-5xl font-mono">RETR</a><i class="fa-solid fa-spin fa-compact-disc text-5xl"></i><a href="/" class="text-4xl font-mono italic font-bold text-red-300">great</a>
-        </h1>
-    </header> 
+  <div class="background-image">
 
-    <main class="grid ">  
-        <aside class="flex flex-wrap bg-orange-200 p-2">     
-            <div class="flex flex-wrap mx-auto"> 
-                <div class="p-2 font-mono flex flex-wrap ">
-                    <button class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 " type="submit">Friends</button>
-                </div>
-                <div class="p-2 items-center font-mono flex flex-wrap">
-                    <button class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 " type="submit">Recipes</button>
-                </div>       
-                <div class="p-2 items-center font-mono flex flex-wrap">
-                    <button class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 " type="submit">Home Improvements</button>
-                </div>    
-                {{#if logged_in}}   
-                <div class="p-2 items-center font-mono flex flex-wrap">
-                    <a href="/profile" class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 " >My Profile</a>
-                </div>    
-                <div class="p-2 items-center font-mono flex flex-wrap">
-                    <a href="/chat" class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 " type="submit">Chat</a>                    
-                </div>    
-                <div class="p-2 items-center font-mono flex flex-wrap">
-                    <button class="no-button text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2" id="logout">Logout</button>                    
-                </div> 
-                {{else}}
-                <div class="p-2 items-center font-mono flex flex-wrap">
-                    <a href="/login" class="text-orange-100 font-bold rounded-lg bg-lime-600 hover:bg-gray-700 shadow-lg shadow-gray-700 p-2 ">Login</a>                    
-                </div> 
-                 {{/if}}
-            </div>            
-        </aside>  
+  </div>
+  <header>
+    <h1><a class="logo" href="/">RETR</a><i class="fa-solid fa-spin fa-compact-disc"></i><a class="logo"
+        href="/">great</a></h1>
 
-        {{{body}}}
-           
-   </main>
-     {{#if logged_in}}
+    <nav>
+      <ul>
+        <li class="btn"><a href="submit">Friends</a></li>
+        <li class="btn"><a href="submit">Recipies</a></li>
+        <li class="btn"> <a href="submit"> Home improvements</a></li>
+        {{#if logged_in}}
+        <li class="btn"><a href="profile">My Profile</a></li>
+        <li class="btn"><a href="submit">chat</a></li>
+        <li class="btn"><a href="logout">Logout</a></li>
+        {{else}}
+        <li class="btn"> <a href="Login">Login</a></li>
+        {{/if}}
+      </ul>
+    </nav>
+    
+  </header>
+  <main>
+    {{{body}}}
+  </main>
+  {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
   
