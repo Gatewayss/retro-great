@@ -592,10 +592,7 @@ color: #000000;
   background-color: #2196f3;
   color: white;
 }
-.profile-frame{
-  border: 2px solid black;
-  width: 200px;
-}
+
 .profile-pic{
   width: 200px;
   border-radius: 10px;
@@ -618,7 +615,8 @@ color: #000000;
   margin: var(--mb-1);
   padding: 45px;
   text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  border: 2px solid black;
+  border-radius: 10px;
 }
 .form input {
   font-family: "Roboto", sans-serif;
@@ -634,10 +632,13 @@ color: #000000;
 .form button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   outline: 0;
   background: #4CAF50;
   width: 100%;
-  border: 0;
+  border: 2px solid black;
   padding: 15px;
   color: #FFFFFF;
   font-size: 14px;
@@ -647,6 +648,8 @@ color: #000000;
 }
 .form button:hover,.form button:active,.form button:focus {
   background: #43A047;
+  border: 2px solid black;
+  
 }
 .form .message {
   margin: 15px 0 0;
