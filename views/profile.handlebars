@@ -13,35 +13,37 @@
 
       {{/if}}
     
-    {{/each}}  
+   {{/each}}  
       
-    {{/if}}
+  {{/if}}
     
-<div id="profile-btn" class="form-group flex flex-wrap mt-2">      
-    <button id="profile_widget" class="btn btn-primary text-white rounded-lg bg-gray-200 hover:bg-gray-300 mx-auto py-2 px-4">Add Profile Photo</button>  
-</div>
+  <div id="profile-btn" class="form-group flex flex-wrap mt-2">      
+      <button id="profile_widget" class="btn btn-primary text-white rounded-lg bg-gray-200 hover:bg-gray-300 mx-auto py-2 px-4">Add Profile Photo</button>  
+  </div>
   
 </div>
- <div class="createPost">
 
-                        <h3 class="mini-headign">Create Post</h3>
-                        <div id="new-post" class="post-text">
-                            <!--pfp can go here?-->
-                            
-                        <form class=" new-post-form">
-                            <label for="post-text"></label>
-                            <input type="text-area" id="post-text" name="post-text" placeholder="What's on your mind, {{name}}">
-                        </form>
-                        </div>
+<div class="createPost">
 
-                        <div class="post-icon">
-                         <button type="submit" class="post-btn">Post</button> 
-                         <button id="upload_widget" class="post-btn">Add Photo</button>  
+  <h3 class="mini-headign">Create Post</h3>
+  <div id="new-post" class="post-text">
+      <!--pfp can go here?-->
+    
+    <form class=" new-post-form">
+        <label for="post-text"></label>
+        <input type="text-area" id="post-text" name="post-text" placeholder="What's on your mind, {{name}}">
+    <!--</form> 
+    </div>-->
 
+    <div class="post-icon">
+    <button type="submit" class="post-btn">Post</button> 
+    <button id="upload_widget" class="post-btn">Add Photo</button>  
+    </div>
+    </form>
 
-                        </div>
+  </div>
 
-                    </div>
+</div>
     
 {{#if posts.length}}
 <div id="profile" class="content-posts">
