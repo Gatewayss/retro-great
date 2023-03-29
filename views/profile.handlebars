@@ -7,9 +7,9 @@
 
       {{#if post.profile_img}} 
   
-      <p class="w-2/4  sm:w-2/5 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/5  border-8 border-double border-red-300 mx-auto rounded-lg">
-        <a href="/edit/{{post.id}}"><img class="image mx-auto " src="{{post.profile_img}}"></img></a>
-      </p>   
+      <div class="profile-frame">
+        <a href="/edit/{{post.id}}"><img class="profile-pic" src="{{post.profile_img}}"></img></a>
+      </div>   
 
       {{/if}}
     
@@ -73,7 +73,7 @@
                     </div>
     
 {{#if posts.length}}
-<div id="profile" class="post-list flex flex-wrap flex-col mx-auto py-4">
+<div id="profile" class="content-posts">
 
   {{#each posts as |post|}} 
 
