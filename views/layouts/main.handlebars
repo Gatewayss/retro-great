@@ -25,11 +25,11 @@
         <li class="btn"><a href="submit">Recipies</a></li>
         <li class="btn"> <a href="submit"> Home improvements</a></li>
         {{#if logged_in}}
-        <li class="btn"><a href="profile">My Profile</a></li>
-        <li class="btn"><a href="submit">chat</a></li>
-        <li class="btn"><a href="logout">Logout</a></li>
+        <li class="btn"><a href="/profile">My Profile</a></li>
+        <li class="btn"><a href="/chat">chat</a></li>
+        <li class="btn" id="logout">Logout</li>
         {{else}}
-        <li class="btn"> <a href="Login">Login</a></li>
+        <li class="btn"><a href="Login">Login</a></li>
         {{/if}}
       </ul>
     </nav>
