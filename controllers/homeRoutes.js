@@ -14,7 +14,10 @@ router.get('/chat', withAuth, async (req, res) => {
 
   const messages = chatMessages.map((chat) => chat.get({ plain: true }));
 
-  res.render('chat', { messages });
+  res.render('chat', { 
+    messages, 
+    logged_in: req.session.logged_in 
+  });
 
   } catch (error) {
     console.error(error);
