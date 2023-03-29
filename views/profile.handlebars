@@ -7,9 +7,9 @@
 
       {{#if post.profile_img}} 
   
-      <p class="w-2/4  sm:w-2/5 md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/5  border-8 border-double border-red-300 mx-auto rounded-lg">
-        <a href="/edit/{{post.id}}"><img class="image mx-auto " src="{{post.profile_img}}"></img></a>
-      </p>   
+      <div class="profile-frame">
+        <a href="/edit/{{post.id}}"><img class="profile-pic" src="{{post.profile_img}}"></img></a>
+      </div>   
 
       {{/if}}
     
@@ -23,7 +23,7 @@
   
 </div>
 
-<div id="new-post" class="py-2 mt-4 md:px-36 border-2 border-gray-700 shadow-lg shadow-current rounded mx-auto">
+{{!-- <div id="new-post" class="py-2 mt-4 md:px-36 border-2 border-gray-700 shadow-lg shadow-current rounded mx-auto">
   <div class="flex flex-wrap flex-col m-5 ">
       <div class="flex flex-wrap flex-col ">               
           <div class="px-4 py-2 mx-auto">
@@ -50,43 +50,52 @@
       </div>      
             
   </div>
-</div>
+</div> --}}
+ <div class="createPost">
 
+                        <h3 class="mini-headign">Create Post</h3>
+                        <div id="new-post" class="post-text">
+                            <!--pfp can go here?-->
+                            
+                        <form class="form new-post-form">
+                            <label for="post-text"></label>
+                            <input type="text-area" id="post-text" name="post-text" placeholder="What's on your mind, {{name}}">
+                        </form>
+                        </div>
+
+                        <div class="post-icon">
+                         <button type="submit" class="post-btn">Post</button> 
+                         <button id="upload_widget" class="post-btn">Add Photo</button>  
+
+
+                        </div>
+
+                    </div>
     
 {{#if posts.length}}
-<div id="profile" class="post-list flex flex-wrap flex-col mx-auto py-4">
+<div id="profile" class="content-posts">
 
   {{#each posts as |post|}} 
 
-  <div class="p-4 mb-2 flex flex-wrap flex-col border-2 border-gray-100 rounded shadow-xl shadow-current max-w-2xl">    
-
-    <div id="posts">
-      <h2 class="py-5 flex flex-wrap flex-col">
-        <a class="text-2xl font-mono" href="/edit/{{post.id}}">{{post.post_text}}</a>
-      </h2>
-
-      <p class="py-2 flex flex-wrap flex-col text-gray-500 italic font-mono">Posted on {{format_date post.created_at}}</p>
-
-      <div class="mx-auto">
-        <p>
-          <a href="/edit/{{post.id}}"><img class="image mx-auto" src="{{post.img}}"></img></a>
-        </p> 
-      </div>
-
-      <div class="mx-auto">
-        <p>
-          <a href="/edit/{{post.id}}"><img class="image mx-auto" src="{{post.profile_img}}"></img></a>
-        </p> 
-      </div>
-
+<div class="post-container">
+  <div class="post-content">
+    <h2 class="post-title">
+      <a href="/edit/{{post.id}}">{{post.post_text}}</a>
+    </h2>
+    <p class="post-info">{{format_date post.created_at}}</p>
+    <div class="post-image-container">
+      <a href="/edit/{{post.id}}"><img class="post-image" src="{{post.img}}"></a>
     </div>
-
-    <div class="px-4 py-2">
-      <button class="btn text-white bg-gray-300 rounded font-mono p-2" data-id="{{post.id}}">DELETE</button>
-      <a href="/edit/{{post.id}}" class="btn text-white bg-gray-300 rounded font-mono px-3 py-3">EDIT</a>
+    <div class="post-image-container">
+      <a href="/edit/{{post.id}}"><img class="post-image" src="{{post.profile_img}}"></a>
     </div>
-
   </div>
+  <div class="post-action">
+    <button class="post-btn delete-btn" data-id="{{post.id}}">DELETE</button>
+    <a href="/edit/{{post.id}}" class="post-btn edit-btn">EDIT</a>
+  </div>
+</div>
+
   {{/each}} 
 </div>
 {{/if}}

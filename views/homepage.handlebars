@@ -1,39 +1,41 @@
 
-<form id="filter" class="mx-auto">   
+<form id="filter" class="filter-content">  
+  <h2>Filter Posts By Age Group</h1> 
   <div class="mx-auto p-2">               
-    <input class="border-2 border-gray-300 rounded text-right mx-auto" type="number" id="start" name="start" value="" min="45" max="60" step="5">
+    <input class="filter-input" type="number" id="start" name="start" value="" min="45" max="60" step="5">
     <label  for="start">yrs<span class="px-2">to</span></label>                          
-    <input class="border-2 border-gray-300 rounded text-right mx-auto" type="number" id="end" name="end" value="" min="45" max="60" step="5">
+    <input class="filter-input" type="number" id="end" name="end" value="" min="45" max="60" step="5">
     <label for="end">yrs</label>   
   </div>    
  
-  <button type="submit" id="btn-filter" class="btn text-gray-500 font-bold rounded-lg bg-gray-300 hover:bg-red-300 shadow-lg shadow-gray-700 p-2 mx-auto">Filter Posts By Age Group</button>                               
+  <button type="submit" id="btn-filter" class="filter">Filter!</button>                               
 </form>
 
-<div class="flex flex-col flex-wrap p-2 mx-auto">    
+<div class="content-posts">
 
   {{#each posts as |post| }}
 
-  <div class="p-4 mb-2 flex flex-wrap flex-col border-2 border-gray-100 rounded shadow-xl shadow-current max-w-2xl">
+  <div class="post">
 
-    <div>    
+    <div class="posts-content">    
 
-      <h2 class="py-5 flex flex-wrap flex-col ">             
-        <a class="text-2xl font-mono" href="/post/{{post.id}}">{{post.post_text}}</a>
+      <h2 class="post-title">             
+        <a class="post-link" href="/post/{{post.id}}">{{post.post_text}}</a>
       </h2>
-       <h2 id="birth" class="hidden">{{post.user.birth_date}}</h2>
-    
-      <p class="py-2 flex flex-wrap flex-col text-gray-500 italic font-mono">Posted by {{post.user.name}} on {{format_date post.created_at}}</p>
       
-      <div class="mx-auto">
+      <h2 class="post-birth-date">{{post.user.birth_date}}</h2>
+    
+      <p class="post-meta">Posted by {{post.user.name}} on {{format_date post.created_at}}</p>
+      
+      <div class="post-image">
         <p>
-            <a href="/post/{{post.id}}"><img class="image mx-auto" src="{{post.img}}"></img></a>  
+            <a href="/post/{{post.id}}"><img class="post-img" src="{{post.img}}"></img></a>  
         </p>  
       </div>
 
-      <div class="mx-auto">
+      <div class="post-profile-image">
         <p>
-            <a href="/post/{{post.id}}"><img class="image mx-auto" src="{{post.profile_img}}"></img></a>  
+            <a href="/post/{{post.id}}"><img class="post-img" src="{{post.profile_img}}"></img></a>  
         </p>  
       </div>
 
@@ -45,7 +47,8 @@
 
 </div>
 
- <script src="/js/filter.js"></script>
+<script src="/js/filter.js"></script>
+
 
   
   

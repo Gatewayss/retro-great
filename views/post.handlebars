@@ -8,38 +8,17 @@
 
       <p class="mx-auto"></div><img class="image mx-auto" src="{{profile_img}}"></img></p>    
 
-      <p class="py-2 flex flex-wrap flex-col text-gray-500 italic font-mono">Posted by {{user.name}} on {{format_date created_at}}</p>   
-      <!--move comments up here with post-->
-      {{#if comments.length}}
-      <div class="p-4 m-4 flex flex-wrap flex-col max-w-xl">   
-        {{#each comments as |comment|}}
-        <div class="border-2 border-gray-400 my-2">
-          <p class="py-2 px-8 ">{{format_date created_at}}</p>
-          <p class="py-2 px-8">{{user.name}}: {{comment_text}}</p>
-          <hr />
-        </div>
-        {{/each}} 
-      </div>
-      {{/if}}
-    </div>      
+      <p class="py-2 flex flex-wrap flex-col text-gray-500 italic font-mono">Posted by {{user.name}} on {{created_at}}</p>   
+
+    </div>
+      
   </div>
 
-
-  <div class="py-4 px-8 my-8 border-2 border-gray-400 rounded shadow-xl shadow-current mx-auto"> 
-      <form id="comment-form" >
-        <p class="p-2 mx-auto">
-          <input type="hidden" id="post_id" value="{{id}}" name="post_id" />          
-          <textarea id="comment-input" class="border-2 border-gray-400 p-2"></textarea>
-        </p>
-        <p class="p-2 mx-auto">
-          <button class="btn btn-primary font-mono rounded border-2 border-gray-400 shadow-curent shadow-xl italic text-white bg-gray-400 p-2" type="submit" id="comment-button" >Comment on this post</button>
-        </p>
-      </form>
+  <div class="p-4 m-4 flex flex-wrap flex-col border-2 border-gray-400 rounded shadow-xl shadow-current max-w-xl mx-auto bg-gray-400">
+    
+    <div class="mx-auto ">        
+      <p class="mx-auto "><button class="btn btn-primary font-mono italic text-white ">Comment on this post</button></p>           
+    </div>
+      
   </div>
- 
-
- <script src="/js/post.js"></script>
-  
-
-
        
