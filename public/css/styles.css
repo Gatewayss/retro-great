@@ -696,3 +696,8 @@ color: #000000;
 .container .info span .fa {
   color: #EF3B3A;
 }
+
+/* comment section */
+#edit-id {
+  display: none;
+}
