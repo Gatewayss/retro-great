@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Post, User, Comment, ChatMessage } = require('../models');
 const withAuth = require('../utils/auth');
+const { Op } = require("sequelize");
 
 router.get('/chat', withAuth, async (req, res) => {
   try {
