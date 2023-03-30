@@ -426,6 +426,10 @@ border: 2px solid black;
 
 /* My Profile styling */
 
+.profile-button {
+  margin-top: 10px;
+}
+
 .post-container {
   display: flex;
   
@@ -734,25 +738,25 @@ border: 2px solid black;
   color: #EF3B3A;
 }
 
-
-
-
 /* chat */
 
-.chat {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+
+.form-container {
+  position: relative;
+  height: 100%;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+
 }
 
 #form {
   background: rgba(0, 0, 0, 0.15);
   padding: 0.25rem;
   position: absolute;
-    bottom: 5px;
-    width:70%;
+
+    bottom: 10px;
+    width: 100%;
+
     border-radius: 10px;
   display: flex;
   height: 3rem;
@@ -786,6 +790,8 @@ border: 2px solid black;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: block;
+  width: 100%;
 }
 
 #messages > li {
@@ -794,6 +800,26 @@ border: 2px solid black;
 
 #messages > li:nth-child(odd) {
   background: #efefef;
+}
+
+/* comment/post page */
+
+.post-date {
+  padding-bottom: 1em;
+}
+
+.date-text {
+  font-size: 14px;
+  padding-top: .5em;
+}
+
+.comment-text {
+  font-size: 20px;
+}
+
+.image {
+  width: 100%;
+  padding-top: 1em;
 }
 
 @media only screen and (max-width: 768px) {
@@ -909,6 +935,28 @@ border: 2px solid black;
     font-size: 35px;
 }
 
+@media only screen and (max-width: 415px) {
+  /* chat text bar for mobile */
+  #form {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 0.5rem 1.7rem 0.5rem;
+  }
+
+  #input {
+    height: 0;
 
   }
+
+  #form > button {
+    width: 95%;
+  }
+
+  #input {
+    width: 95%;
+    padding: 0.6rem 1rem;
+    margin: 0; 
+  }
+}
 
