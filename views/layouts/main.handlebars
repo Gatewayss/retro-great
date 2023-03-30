@@ -16,21 +16,22 @@
 
   </div>
   <header>
-    <h1 class="title"><a class="logo" href="/">RETR</a><i class="spin fa-solid fa-spin fa-compact-disc"></i><a class="logo"
+    <h1 class="title"><a class="logo" href="/">RETR</a><a class="logo-icon" href="/"><i class="spin fa-solid fa-spin fa-compact-disc"></i></a><a class="logo"
         href="/">great</a></h1>
 
     <nav>
       <ul>
 
-        <li class="btn"><a href="submit"><i class="fa-solid fa-user-group fa-beat" style="color: #000000;"></i>-Friends</a></li>
         
-        <li class="btn"> <a href="submit"><i class="fa-solid fa-hammer fa-beat"></i>-Home improvements</a></li>
+        <li class="btn"><i class="fa-solid fa-apple-whole fa-beat" style="color: #000000;"></i>&nbsp;Recipes</li>
+        <li class="btn"> <i class="fa-solid fa-hammer fa-beat"></i>&nbsp;Home improvements</li>
         {{#if logged_in}}
-        <li class="btn"><a href="profile"><i class="fa-solid fa-user fa-beat" style="color: #000000;"></i>-My Profile</a></li>
-        <li class="btn"><a href="submit"><i class="fa-brands fa-rocketchat fa-beat" style="color: #000000;"></i>-chat</a></li>
-        <li class="btn"><a href="logout"><i class="fa-solid fa-right-to-bracket fa-beat" style="color: #000000;"></i>-Logout</a></li>
+        <li class="btn"><i class="fa-solid fa-user-group fa-beat" style="color: #000000;"></i>&nbsp;Friends</li>
+        <a href="/profile"><li class="btn"><i class="fa-solid fa-user fa-beat" style="color: #000000;"></i>&nbsp;My Profile</li></a>
+        <a href="/chat"><li class="btn"><i class="fa-brands fa-rocketchat fa-beat" style="color: #000000;"></i>&nbsp;Chat</li></a>
+        <li class="btn" id="logout"><i class="fa-solid fa-right-to-bracket fa-beat" style="color: #000000;"></i>&nbsp;Logout</li>
         {{else}}
-        <li class="btn"> <a href="Login"><i class="fa-solid fa-right-to-bracket fa-beat" style="color: #000000;"></i>-Login</a></li>
+        <a href="/login"><li class="btn"> <i class="fa-solid fa-right-to-bracket fa-beat" style="color: #000000;"></i>&nbsp;Login</li></a>
 
         {{/if}}
       </ul>
