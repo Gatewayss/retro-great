@@ -655,12 +655,19 @@ border: 2px solid black;
 
 /* chat */
 
+.form-container {
+  position: relative;
+  height: 100%;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+}
+
 #form {
   background: rgba(0, 0, 0, 0.15);
   padding: 0.25rem;
   position: absolute;
     bottom: 10px;
-    width:70%;
+    width: 100%;
     border-radius: 10px;
   display: flex;
   height: 3rem;
@@ -694,6 +701,8 @@ border: 2px solid black;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: block;
+  width: 100%;
 }
 
 #messages > li {
@@ -792,4 +801,26 @@ border: 2px solid black;
 }
   }
 
+@media only screen and (max-width: 415px) {
+  /* chat text bar for mobile */
+  #form {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 0.5rem 1.7rem 0.5rem;
+  }
 
+  #input {
+    height: 0;
+
+  }
+  #form > button {
+    width: 95%;
+  }
+
+  #input {
+    width: 95%;
+    padding: 0.6rem 1rem;
+    margin: 0; 
+  }
+}
