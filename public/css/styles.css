@@ -106,17 +106,18 @@
 
 
 
-body{
+body {
     background-image: url('../imgs/blob-scene-haikei\ \(8\).svg');
     background-repeat: no-repeat;
     background-size:cover;
+    background-attachment: fixed;
     -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: #3a78ffec;
-   
-    overflow: auto;
-    
-    height: 100vh;
-    
+    -webkit-tap-highlight-color: #3a78ffec;   
+
+    overflow: auto;    
+
+    height: 100vh;    
+
 }
 button:focus,
 input:focus{
@@ -137,13 +138,10 @@ a:focus, a:hover{
 .title{
   margin-top: var(--mb-2-5);
   font-size: 60px;
-  width: 100%;
+  /*width: 100%;
   justify-content: center;
-  display: flex;
-  /*--------ADD flex-wrap-----------------------------------------------------*/
-  flex-wrap: wrap;
- /*----------ADD justify content center-------*/
- 
+  display: flex; 
+  flex-wrap: wrap;*/ 
 }
 
 .logo{
@@ -186,11 +184,8 @@ nav {
 ul {
 	list-style: none;
 	display: flex;
-   /*--------ADD flex-wrap-----------------------------------------------------*/
   flex-wrap: wrap;
-  /*----------ADD justify content center-------*/
   justify-content: center;
-
 	margin: var(--mb-0-25);
 	padding: 0;
 }
@@ -221,8 +216,8 @@ a {
     align-items: center;
     cursor: pointer;
     text-transform: uppercase;
-    /*--------------------------take out for testing-----------------*/
-    /*width: 100%;
+    
+    /*width: 100%
     max-width: 400px;*/
 }
     
@@ -267,6 +262,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+/*center filter heading for smaller screens*/
+.filter-head {
+  text-align: center;
+  padding-bottom: 8px;
 }
 
 .filter-input {
@@ -490,6 +490,14 @@ border: 2px solid black;
   border-radius: 10px;
   margin: var(--mb-0-75);
   border: 2px solid black;
+}
+
+/*centers profile button for smaller screens*/
+.profile-group {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Edit Post styling */
@@ -764,6 +772,7 @@ border: 2px solid black;
       margin-bottom: 0.5rem;
       width: 100%;
     
+    
       /*max-width: calc(50% - 1rem);*/
     }
     
@@ -774,6 +783,10 @@ border: 2px solid black;
     .post-image, .post-profile-image {
       margin-left: 0;
       margin-right: 0;
+    }
+
+    .post-container {
+      width: 100%;
     }
 
   }
