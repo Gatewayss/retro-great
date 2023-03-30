@@ -16,20 +16,22 @@
 
   </div>
   <header>
-    <h1><a class="logo" href="/">RETR</a><i class="fa-solid fa-spin fa-compact-disc"></i><a class="logo"
+    <h1 class="title"><a class="logo" href="/">RETR</a><i class="spin fa-solid fa-spin fa-compact-disc"></i><a class="logo"
         href="/">great</a></h1>
 
     <nav>
       <ul>
-        <li class="btn">Friends</li>
-        <li class="btn">Recipes</li>
-        <li class="btn">Home improvements</li>
+
+        <li class="btn"><a href="submit"><i class="fa-solid fa-user-group fa-beat" style="color: #000000;"></i>-Friends</a></li>
+        
+        <li class="btn"> <a href="submit"><i class="fa-solid fa-hammer fa-beat"></i>-Home improvements</a></li>
         {{#if logged_in}}
-        <li class="btn"><a href="/profile">My Profile</a></li>
-        <li class="btn"><a href="/chat">chat</a></li>
-        <li class="btn" id="logout">Logout</li>
+        <li class="btn"><a href="profile"><i class="fa-solid fa-user fa-beat" style="color: #000000;"></i>-My Profile</a></li>
+        <li class="btn"><a href="submit"><i class="fa-brands fa-rocketchat fa-beat" style="color: #000000;"></i>-chat</a></li>
+        <li class="btn"><a href="logout"><i class="fa-solid fa-right-to-bracket fa-beat" style="color: #000000;"></i>-Logout</a></li>
         {{else}}
-        <li class="btn"><a href="Login">Login</a></li>
+        <li class="btn"> <a href="Login"><i class="fa-solid fa-right-to-bracket fa-beat" style="color: #000000;"></i>-Login</a></li>
+
         {{/if}}
       </ul>
     </nav>
