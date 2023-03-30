@@ -581,8 +581,9 @@ border: 2px solid black;
   background-color: #000;
 }
 
-.edit-id {
-  display: none;
+#edit-id {
+  /*display: none;*/
+  color: white;
 }
 
 /*login page */
