@@ -752,7 +752,7 @@ border: 2px solid black;
 #form {
   background: rgba(0, 0, 0, 0.15);
   padding: 0.25rem;
-  position: absolute;
+ /* position: absolute;*/
 
     bottom: 10px;
     width: 100%;
@@ -934,7 +934,7 @@ border: 2px solid black;
     margin-top: var(--mb-2-5);
     font-size: 35px;
 }
-
+  }
 @media only screen and (max-width: 415px) {
   /* chat text bar for mobile */
   #form {
