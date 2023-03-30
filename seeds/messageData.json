@@ -1,10 +1,21 @@
 [
     {
-        "message": "Hello!",
+
+        "message": "Hi, ladies!",
         "user_id": 1
     },
     {
-        "message": "Hi! How is everyone? ",
+        "message": "Hi! Do you have that recipe?",
+        "user_id": 2
+    },
+    {
+        "message": "Yes! What's going this weekend?",
+        "user_id": 1
+    },
+
+    {
+        "message": "Bathroom remodel! So excited.",
+
         "user_id": 3
     }
 ]

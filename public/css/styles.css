@@ -106,17 +106,18 @@
 
 
 
-body{
+body {
     background-image: url('../imgs/blob-scene-haikei\ \(8\).svg');
     background-repeat: no-repeat;
     background-size:cover;
+    background-attachment: fixed;
     -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: #3a78ffec;
-   
-    overflow: auto;
-    
-    height: 100vh;
-    
+    -webkit-tap-highlight-color: #3a78ffec;   
+
+    overflow: auto;    
+
+    height: 100vh;    
+
 }
 button:focus,
 input:focus{
@@ -137,11 +138,21 @@ a:focus, a:hover{
 .title{
   margin-top: var(--mb-2-5);
   font-size: 60px;
+  /*width: 100%;
+  justify-content: center;
+  display: flex; 
+  flex-wrap: wrap;*/ 
 }
 
 .logo{
   font-family: 'Russo One', sans-serif;
   color: white;
+  
+}
+
+.logo-icon{
+  font-family: 'Russo One', sans-serif;
+  color: black;
   
 }
 
@@ -167,17 +178,21 @@ header {
 nav {
 	display: flex;
 	justify-content: center;
+  
 }
 
 ul {
 	list-style: none;
 	display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 	margin: var(--mb-0-25);
 	padding: 0;
 }
 
 li {
-	margin: var(--mb-1)
+	margin: var(--mb-1);
+ 
 }
 a {
 	color: black;
@@ -201,8 +216,9 @@ a {
     align-items: center;
     cursor: pointer;
     text-transform: uppercase;
-    width: 100%;
-    max-width: 400px;
+    
+    /*width: 100%
+    max-width: 400px;*/
 }
     
     .btn:hover{
@@ -246,6 +262,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+/*center filter heading for smaller screens*/
+.filter-head {
+  text-align: center;
+  padding-bottom: 8px;
 }
 
 .filter-input {
@@ -308,6 +329,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+ 
 }
 
 .post-title {
@@ -410,14 +432,20 @@ border: 2px solid black;
 
 .post-container {
   display: flex;
+  
   flex-direction: column;
   border: 2px solid black;
   border-radius: 8px;
   margin-bottom: 16px;
+  min-width: 500px;
+ 
 }
 
 .post-content {
   padding: 16px;
+
+  
+  
 }
 
 .post-title {
@@ -473,6 +501,58 @@ border: 2px solid black;
   border-radius: 10px;
   margin: var(--mb-0-75);
   border: 2px solid black;
+}
+
+/*centers profile button for smaller screens*/
+.profile-group {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  
+}
+
+.comment-group {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;  
+}
+
+#comment-button {
+  width:100%;
+  align-items: center;     
+  justify-content: center;
+}
+
+.comments {
+  padding: 5px;
+  margin: 5px;
+}
+
+.comments-detail{
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; 
+  justify-content: space-between;
+  border: solid;
+  border-width: 1px;  
+  border-color: gray;
+  border-radius: 30px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.comment-text, .comment-date {
+  padding: 5px;
+}
+
+.comment-date {
+  color: gray;
+  font-style: italic;
 }
 
 /* Edit Post styling */
@@ -556,8 +636,9 @@ border: 2px solid black;
   background-color: #000;
 }
 
-.edit-id {
-  display: none;
+#edit-id {
+  /*display: none;*/
+  color: white;
 }
 
 /*login page */
@@ -659,19 +740,23 @@ border: 2px solid black;
 
 /* chat */
 
+
 .form-container {
   position: relative;
   height: 100%;
   margin-right: 0.5em;
   margin-left: 0.5em;
+
 }
 
 #form {
   background: rgba(0, 0, 0, 0.15);
   padding: 0.25rem;
   position: absolute;
+
     bottom: 10px;
     width: 100%;
+
     border-radius: 10px;
   display: flex;
   height: 3rem;
@@ -771,19 +856,45 @@ border: 2px solid black;
       padding: 0.5rem;
       margin-right: 0.5rem;
       margin-bottom: 0.5rem;
-      max-width: calc(50% - 1rem);
+      width: 100%;
+    
+    
+      /*max-width: calc(50% - 1rem);*/
     }
     
-    .post:nth-child(even) {
+    /*.post:nth-child(even) {
       margin-right: 0;
-    }
+    }*/
     
     .post-image, .post-profile-image {
       margin-left: 0;
       margin-right: 0;
     }
+
+    .post-container {
+      min-width: 200px;
+      width: 100%;
+    }
+
+    .comments-detail{
+     
+      flex-direction: column; 
+      justify-content: center;
+      align-items: center;
+   
+    }
+
+
   }
   
+  @media only screen and (max-width: 640px) {
+  
+  .title {
+    margin-top: var(--mb-2-5);
+    font-size: 40px;  
+  }
+  }
+
   @media only screen and (max-width: 480px) {
     /* Styles for phones and smaller screens */
     body {
@@ -823,7 +934,6 @@ border: 2px solid black;
     margin-top: var(--mb-2-5);
     font-size: 35px;
 }
-  }
 
 @media only screen and (max-width: 415px) {
   /* chat text bar for mobile */
@@ -838,6 +948,7 @@ border: 2px solid black;
     height: 0;
 
   }
+
   #form > button {
     width: 95%;
   }
@@ -848,3 +959,4 @@ border: 2px solid black;
     margin: 0; 
   }
 }
+

@@ -1,24 +1,48 @@
-   <div class="edit-form-container">  
-      <h1 class="">{{post_text}}</h1>
-      <img class="image" src="{{img}}"></img>
-      <img class="image" src="{{profile_img}}"></img>   
-      <h3 class="post-date">Posted by {{user.name}} on {{format_date created_at}}</h3>   
+
+<div class="content-posts">
+
+  <div class="post">   
+     <div class="posts-content">    
+
+    <h2 class="post-title">{{post_text}}</h2>
+
+    <p class="post-image"><img class="post-img" src="{{img}}"></img></p>
+
+    <p class="post-profile-image"></div><img class="post-img" src="{{profile_img}}"></img></p>    
+
+    <p class="post-meta">Posted by {{user.name}} on {{format_date created_at}}</p>   
      
       {{#if comments.length}}
-
+      <div class="comments">   
         {{#each comments as |comment|}}
-          <p class="date-text">{{format_date created_at}}</p>
-          <p class="comment-text">{{user.name}}: {{comment_text}}</p>
-          <hr />
+        <div class="comments-detail">
+          
+          <p class="comment-text"><b>{{user.name}}:</b> {{comment_text}}</p>
+          <p class="comment-date">{{format_date created_at}}</p>
+         <!-- <hr />-->
+        </div>
+
         {{/each}} 
       {{/if}}
-    </div>      
 
-      <form id="comment-form" >
+      </div>
+  </div>      
+</div>
+
+
+  <div class="comment-group">   
+      <form  class="edit-form" id="comment-form" >
+        <p class="edit-text-container">
           <input type="hidden" id="post_id" value="{{id}}" name="post_id" />          
-          <textarea id="comment-input" class="edit-textarea"></textarea>
+          <textarea class="edit-textarea" id="comment-input"></textarea>
+        </p>
+        <p >
           <button class="btn" type="submit" id="comment-button" >Comment on this post</button>
-      </form>
+        </p>
+      </form>     
+  </div>
+ 
+
 
  <script src="/js/post.js"></script>
   
