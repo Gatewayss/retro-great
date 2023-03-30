@@ -404,6 +404,10 @@ border: 2px solid black;
 
 /* My Profile styling */
 
+.profile-button {
+  margin-top: 10px;
+}
+
 .post-container {
   display: flex;
   flex-direction: column;
