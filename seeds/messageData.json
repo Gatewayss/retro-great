@@ -1,14 +1,10 @@
 [
     {
-        "message": "hello",
+        "message": "Hello!",
         "user_id": 1
     },
     {
-        "message": "cool",
-        "user_id": 2
-    },
-    {
-        "message": "blah",
+        "message": "Hi! How is everyone? ",
         "user_id": 3
     }
 ]
