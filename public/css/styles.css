@@ -696,3 +696,88 @@ color: #000000;
 .container .info span .fa {
   color: #EF3B3A;
 }
+
+/* edit */
+
+.edit-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.edit-text-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.edit-text-label {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.edit-textarea {
+  padding: 1rem;
+  font-size: 1.25rem;
+  border: 2px solid #000;
+}
+
+.edit-img-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.edit-img-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.edit-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.edit-profile-img-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.edit-profile-img-text {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.edit-profile-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.edit-btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.edit-submit-btn {
+  background-color: #333;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.edit-submit-btn:hover {
+  background-color: #000;
+}
+
+.edit-id {
+  display: none;
+}

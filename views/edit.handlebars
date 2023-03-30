@@ -1,19 +1,30 @@
-  <div class="p-4 mt-8 flex flex-wrap flex-col border-2 border-gray-100 rounded shadow-xl shadow-current max-w-xl mx-auto">
-      <form class="form edit-form">
+<div class="edit-form-container">
 
-        <div class="form-group flex flex-wrap flex-col px-4 py-2">
-          <label for="edit-text"></label>
-          <textarea class="form-input p-8 border-2 border-black font-mono text-2xl text-center" id="edit-text" name="edit-text">{{post_text}}</textarea>
-        </div>
-        <p id="img" class="mx-auto"><img class="image mx-auto" src="{{img}}"></img></p>
+  <form class="edit-form">
 
-        <p id="profile_img" class="mx-auto"><img class="image mx-auto" src="{{profile_img}}"></img></p>    
-        
-        <div class="form-group flex flex-wrap">
-          <button id="edit-btn" type="submit" class="btn btn-primary text-white rounded-lg bg-gray-500 hover:bg-gray-700 mx-auto mt-2 py-4 px-14">Update Post</button>  
-        </div>
-        <p class="text-white" id="edit-id">{{id}}</p>
-      </form>
+    <div class="edit-text-container">
+      <label for="edit-textarea" class="edit-text-label">Post Content:</label>
+      <textarea class="edit-textarea" id="edit-textarea" name="edit-text">{{post_text}}</textarea>
+    </div>
+
+    <div class="edit-img-container">
+      <p class="edit-img-text">Post Image:</p>
+      <img class="edit-img" src="{{img}}"></img>
+    </div>
+
+    <div class="edit-profile-img-container">
+      <p class="edit-profile-img-text"</p>
+      <img class="edit-profile-img" src="{{profile_img}}"></img>
+    </div>
+
+    <div class="edit-btn-container">
+      <button id="edit-btn" type="submit" class="edit-submit-btn">Update Post</button>
+    </div>
+
+    <p class="edit-id">{{id}}</p>
+  </form>
+
+</div>
 
    <script src="/js/edit.js"></script>
 
