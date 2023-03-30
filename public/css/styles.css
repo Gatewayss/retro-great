@@ -717,6 +717,26 @@ border: 2px solid black;
   background: #efefef;
 }
 
+/* comment/post page */
+
+.post-date {
+  padding-bottom: 1em;
+}
+
+.date-text {
+  font-size: 14px;
+  padding-top: .5em;
+}
+
+.comment-text {
+  font-size: 20px;
+}
+
+.image {
+  width: 100%;
+  padding-top: 1em;
+}
+
 @media only screen and (max-width: 768px) {
     /* Styles for tablet and smaller screens */
     body {
