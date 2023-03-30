@@ -23,7 +23,7 @@ To join a chat room, click on "Chat" in the header and you will be directed ther
 
 
 ### Links
-See it live on [Heroku!](https://retro-great.herokuapp.com/)
+See it live on [Heroku!](https://retro-great-1.herokuapp.com/)
 
 ### Images Credits
 The contributors of this project do not own the photos in seed post data file. The rights remain with the creators all found on [shutterstock.com](https://www.shutterstock.com/discover/stock-image-0120?ds_ag=FF%3DBrand-Shutter-Stock-Image_AU%3DProspecting&ds_agid=58700002396912626&ds_cid=71700000014879517&ds_eid=700000001400310&ds_rl=1243391&gclid=CjwKCAjw5pShBhB_EiwAvmnNV_60_4IRx4qAMjf6F6dsCGTetBFij1WQ3wWziNOvRDfeFz-OXGa2rhoCmZ8QAvD_BwE&gclsrc=aw.ds&kw=shutter%20stock%20image&utm_campaign=CO%3DUS_LG%3DEN_BU%3DIMG_AD%3DBRAND_TS%3Dlggeneric_RG%3DAMER_AB%3DACQ_CH%3DSEM_OG%3DCONV_PB%3DGoogle&utm_medium=cpc&utm_source=GOOGLE). 
