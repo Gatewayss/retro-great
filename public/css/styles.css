@@ -402,7 +402,137 @@ border: 2px solid black;
 
 
 
+<<<<<<< Updated upstream
 /* My Profile styling */
+=======
+@media only screen and (max-width: 768px) {
+    /* Styles for tablet and smaller screens */
+    body {
+      margin: 3rem;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+    
+    nav {
+      font-size: 0.8rem;
+    }
+    
+    li {
+      margin: 0 0.5rem;
+    }
+    .btn {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+    #create-post {
+      height: 150px;
+    }
+    .content-posts {
+      flex-direction: row;
+      padding: 0.5rem;
+      max-width: 100%;
+    }
+    
+    .post {
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+      max-width: calc(50% - 1rem);
+    }
+    
+    .post:nth-child(even) {
+      margin-right: 0;
+    }
+    
+    .post-image, .post-profile-image {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    /* Styles for phones and smaller screens */
+    body {
+      margin: 2rem;
+    }
+    
+    h1 {
+      font-size: 1.5rem;
+    }
+    
+    nav {
+      font-size: 0.6rem;
+    }
+    
+    li {
+      margin: 0 0.2rem;
+    }
+    .btn {
+        padding: 6px 16px;
+        font-size: 10px;
+    }
+    #create-post {
+      height: 100px;
+    }
+    .post {
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }
+/* chat */
+
+#form {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.25rem;
+  position: absolute;
+    bottom: 10px;
+    width:70%;
+    border-radius: 10px;
+  display: flex;
+  height: 3rem;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px);
+}
+
+#input {
+  border: none;
+  padding: 0 1rem;
+  flex-grow: 1;
+  border-radius: 2rem;
+  margin: 0.25rem;
+}
+
+#input:focus {
+  outline: none;
+}
+
+#form > button {
+  background: #333;
+  border: none;
+  padding: 0 1rem;
+  margin: 0.25rem;
+  border-radius: 3px;
+  outline: none;
+  color: #fff;
+}
+
+#messages {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#messages > li {
+  padding: 0.5rem 1rem;
+}
+
+#messages > li:nth-child(odd) {
+  background: #efefef;
+}
+
+>>>>>>> Stashed changes
 
 .post-container {
   display: flex;
@@ -660,10 +790,10 @@ border: 2px solid black;
 #form {
   background: rgba(0, 0, 0, 0.15);
   padding: 0.25rem;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  position: absolute;
+    bottom: 10px;
+    width:70%;
+    border-radius: 10px;
   display: flex;
   height: 3rem;
   box-sizing: border-box;
