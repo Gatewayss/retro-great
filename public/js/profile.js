@@ -107,6 +107,10 @@ document
 .addEventListener('submit', newFormHandler);
  
 
+// document
+// .querySelector('.post-list')
+// .addEventListener('click', delButtonHandler);
+
 document
-.querySelector('.post-list')
+.querySelector('.content-posts')
 .addEventListener('click', delButtonHandler);

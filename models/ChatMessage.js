@@ -1,4 +1,5 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes, Sequelize } = require('sequelize');
+
 const sequelize = require('../config/connection.js');
 
 class ChatMessage extends Model { }
@@ -14,8 +15,16 @@ ChatMessage.init({
         type: DataTypes.STRING,
         allowNull: false
     },
-    username: {
-        type: DataTypes.STRING,
+    created_at: {
+        type: DataTypes.DATE,
+        defaultValue: DataTypes.NOW,
+    },
+    created_time: {
+        type: DataTypes.DATE,
+        defaultValue: Sequelize.NOW,
+        get() {
+            return this.getDataValue('created_at').toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+        }
     },
     user_id: {
         type: DataTypes.INTEGER,
@@ -24,7 +33,7 @@ ChatMessage.init({
             key: 'id',
         },
     },
-    
+
 }, {
     sequelize,
     timestamps: false,
